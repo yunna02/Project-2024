@@ -1,0 +1,28 @@
+# Project: Practice5
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Practice5.o
+LINKOBJ  = Practice5.o
+LIBS     = -L"C:/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Dev-Cpp/TDM-GCC-64/include" -I"C:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Dev-Cpp/TDM-GCC-64/include" -I"C:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Practice5.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Practice5.o: Practice5.c
+	$(CC) -c Practice5.c -o Practice5.o $(CFLAGS)
