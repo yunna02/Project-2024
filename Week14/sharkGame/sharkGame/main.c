@@ -144,11 +144,11 @@ int getWinner(void)
     int max_coin = -1;
 
     for (int i = 0; i < N_PLAYER; i++) {
-        // LIVE 또는 END 상태인 플레이어만 고려
+        
         if ((player_status[i] == PLAYERSTATUS_LIVE || player_status[i] == PLAYERSTATUS_END) &&
             player_coin[i] > max_coin) {
-            max_coin = player_coin[i]; // 최대 코인 업데이트
-            winner = i; // 최대 코인을 가진 플레이어 번호 저장
+            max_coin = player_coin[i]; 
+            winner = i; 
         }
     }
 

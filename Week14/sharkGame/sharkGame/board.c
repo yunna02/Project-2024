@@ -78,7 +78,7 @@ int board_initBoard(void)
 // ----- EX. 5 : shark ------------
 int board_stepShark(void)
 {
-	 int steps = rand() % MAX_SHARKSTEP + 1;  // 1 ~ MAX_SHARKSTEP 칸 만큼 이동
+	 int steps = rand() % MAX_SHARKSTEP + 1;  
 
     
     int start_pos = shark_position;  
